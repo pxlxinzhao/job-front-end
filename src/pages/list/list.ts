@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+import { DetailPage } from '../postDetail/postDetail';
 
 @Component({
   selector: 'page-list',
@@ -8,30 +11,37 @@ import { NavController, NavParams } from 'ionic-angular';
 export class ListPage {
   selectedItem: any;
   icons: string[];
-  items: Array<{title: string, note: string, icon: string}>;
+  posts: Array<{
+    id: number,
+    postby: string,
+    timestamp: number,
+    title: string,
+    details: string,
+    category: string,
+    salary: number,
+    email: string,
+    phone: string,
+    phone2: string,
+    address: string,
+    city: string,
+    state: string,
+    country: string,
+    isagent: boolean,
+    requirment: string}
+    >;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    // If we navigated to this page, we will have an item available as a nav param
-    this.selectedItem = navParams.get('item');
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+  public http: Http) {
 
-    // Let's populate this page with some filler content for funzies
-    this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    'american-football', 'boat', 'bluetooth', 'build'];
-
-    this.items = [];
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
+    this.http.get('http://localhost:8080/job/posts/list').map(res => res.json()).subscribe(data => {
+      this.posts = data
+    });
   }
 
-  itemTapped(event, item) {
+  itemTapped(event, post) {
     // That's right, we're pushing to ourselves!
-    this.navCtrl.push(ListPage, {
-      item: item
+    this.navCtrl.push(DetailPage, {
+      post: post
     });
   }
 }
