@@ -33,7 +33,7 @@ export class ListPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,
   public http: Http) {
 
-    this.http.get('http://localhost:8080/job/posts/list').map(res => res.json()).subscribe(data => {
+    this.http.get('https://job-java.herokuapp.com/posts/list').map(res => res.json()).subscribe(data => {
       this.posts = data
     });
   }

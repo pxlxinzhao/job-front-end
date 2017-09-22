@@ -14,3 +14,32 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+@font-face {
+  font-family: WenQuan;
+  src: url(../assets/font/WenQuan.ttf);
+}
+
+* {
+  font-family: WenQuan;
+}
+
+.myRed {
+  background-color: #f53d3d;
+}
+
+.toolbar-background {
+  @extend .myRed
+}
+
+.menu-header{
+  background-image: url("../assets/img/material-graphite.jpg");
+  min-height: 200px;
+}
+
+.menu-header h1 {
+  color: #ffffff;
+  margin: 0;
+}
+
+

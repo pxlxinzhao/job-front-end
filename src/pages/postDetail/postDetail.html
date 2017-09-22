@@ -9,8 +9,91 @@
 
 <ion-content>
 
-{{post.title}}<br>
+  <ion-item>
+    <ion-label>发布人</ion-label>
+    <ion-input readonly ngModel="{{post.postby}}"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>发布时间</ion-label>
+    <ion-input readonly ngModel="{{post.timestamp}}"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>标题</ion-label>
+    <ion-input readonly ngModel="{{post.title}}"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>类别</ion-label>
+    <ion-input readonly ngModel="{{post.category}}"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>薪资</ion-label>
+    <ion-input readonly ngModel="{{post.salary}}"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>电子邮件</ion-label>
+    <ion-input readonly ngModel="{{post.email}}"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>主要电话</ion-label>
+    <ion-input readonly ngModel="{{post.phone}}"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>备用电话</ion-label>
+    <ion-input readonly ngModel="{{post.phone2}}"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>地址</ion-label>
+    <ion-input readonly ngModel="{{post.address}}"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>城市</ion-label>
+    <ion-input readonly ngModel="{{post.city}}"></ion-input>
+  </ion-item>
 
-  {{post.details}}
+  <ion-item>
+    <ion-label>是否中介</ion-label>
+    <ion-input readonly ngModel="{{post.isagent}}"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>要求</ion-label>
+    <ion-input readonly ngModel="{{post.requirment}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>职位描述</ion-label>
+    <ion-textarea ngModel="{{post.details}}" readonly></ion-textarea>
+  </ion-item>
 
 </ion-content>
+
+
+
+<!--<ion-item>{{post.id}}</ion-item>-->
+<!--<ion-item>{{post.postby}}</ion-item>-->
+<!--<ion-item>{{post.timestamp}}</ion-item>-->
+<!--<ion-item>{{post.title}}</ion-item>-->
+<!--<ion-item>{{post.category}}</ion-item>-->
+<!--<ion-item>{{post.salary}}</ion-item>-->
+<!--<ion-item>{{post.email}}</ion-item>-->
+<!--<ion-item>{{post.phone}}</ion-item>-->
+<!--<ion-item>{{post.phone2}}</ion-item>-->
+<!--<ion-item>{{post.address}}</ion-item>-->
+<!--<ion-item>{{post.city}}</ion-item>-->
+<!--<ion-item>{{post.state}}</ion-item>-->
+<!--<ion-item>{{post.country}}</ion-item>-->
+<!--<ion-item>{{post.isagent}}</ion-item>-->
+<!--<ion-item>{{post.requirment}}</ion-item>-->
+
+<!--<ion-item>-->
+<!--<ion-label>yoyo</ion-label>-->
+<!--<ion-input readonly ngModel="{{post.id}}"></ion-input>-->
+<!--</ion-item>-->
+
+<!--<ion-item>-->
+<!--<ion-label>州省</ion-label>-->
+<!--<ion-input readonly ngModel="{{post.state}}"></ion-input>-->
+<!--</ion-item>-->
+<!--<ion-item>-->
+<!--<ion-label>国家</ion-label>-->
+<!--<ion-input readonly ngModel="{{post.country}}"></ion-input>-->
+<!--</ion-item>-->

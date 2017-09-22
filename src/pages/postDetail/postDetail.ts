@@ -11,6 +11,8 @@ export class DetailPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.post = navParams['data']['post'];
+
+    this.post.timestamp = new Date(this.post.timestamp).toLocaleString();
   }
 
 }
