@@ -19,6 +19,22 @@
   @extend .myYellow
 }
 
+.menu-inner .scroll-content {
+  @extend .myYellow
+}
+
+.menu-button {
+  background-color: transparent;
+  padding: 10px;
+  margin-left: 20px;
+  font-weight: 700;
+}
+
+.item-md.item-block .item-inner {
+  padding-right: 8px;
+  border-bottom: 0px solid #dedede;
+}
+
 .menu-header{
   background-image: url("../assets/img/material-graphite.jpg");
   min-height: 200px;

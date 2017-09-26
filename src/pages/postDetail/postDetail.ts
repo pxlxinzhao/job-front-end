@@ -16,4 +16,8 @@ export class DetailPage {
     this.post.timestamp = moment(this.post.timestamp).format('MM/DD/YYYY HH:mm');
   }
 
+  getSalary(){
+  	return this.post.salary == 0 ?　'面议' : this.post.salary
+  }
+
 }
