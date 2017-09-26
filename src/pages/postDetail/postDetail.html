@@ -9,6 +9,16 @@
 
 <ion-content>
   <ion-grid>
+
+    <ion-row>
+      <ion-col col-12>
+          <ion-item>
+            <ion-label>标题</ion-label>
+            <ion-input class="bold" readonly ngModel="{{post.title}}"></ion-input>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+
     <ion-row>
       <ion-col col-6>
           <ion-item>
@@ -24,20 +34,19 @@
       </ion-col>
     </ion-row>
 
-    <ion-row>
-      <ion-col col-12>
-          <ion-item>
-            <ion-label>标题</ion-label>
-            <ion-input readonly ngModel="{{post.title}}"></ion-input>
-          </ion-item>
-      </ion-col>
-    </ion-row>
+
 
       <ion-row>
-      <ion-col col-12>
+      <ion-col col-6>
             <ion-item>
               <ion-label>类别</ion-label>
               <ion-input readonly ngModel="{{post.category}}"></ion-input>
+            </ion-item>
+      </ion-col>
+      <ion-col col-6>
+            <ion-item>
+              <ion-label>要求</ion-label>
+              <ion-input readonly value="{{getRequirement()}}"></ion-input>
             </ion-item>
       </ion-col>
     </ion-row>
@@ -101,15 +110,6 @@
             <ion-item>
               <ion-label>是否中介</ion-label>
               <ion-input readonly ngModel="{{post.isagent}}"></ion-input>
-            </ion-item>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col col-12>
-            <ion-item>
-              <ion-label>要求</ion-label>
-              <ion-input readonly ngModel="{{post.requirment}}"></ion-input>
             </ion-item>
       </ion-col>
     </ion-row>

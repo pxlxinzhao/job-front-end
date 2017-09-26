@@ -20,4 +20,8 @@ export class DetailPage {
   	return this.post.salary == 0 ?　'面议' : this.post.salary
   }
 
+  getRequirement(){
+  	return !this.post.requirement ?　'不详' : this.post.requirement
+  }
+
 }
