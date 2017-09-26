@@ -39,9 +39,16 @@ export class ListPage {
   }
 
   itemTapped(event, post) {
-    // That's right, we're pushing to ourselves!
     this.navCtrl.push(DetailPage, {
-      post: post
+      post: post,
+      isNewPost: false
+    });
+  }
+
+  newPost(){
+    this.navCtrl.push(DetailPage, {
+      post: {},
+      isNewPost: true
     });
   }
 }

@@ -9,19 +9,32 @@ import * as moment from 'moment';
 export class DetailPage {
 
   post: any;
+  isNewPost: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.post = navParams['data']['post'];
+    this.isNewPost = navParams['data']['isNewPost'];
 
     this.post.timestamp = moment(this.post.timestamp).format('MM/DD/YYYY HH:mm');
   }
 
-  getSalary(){
-  	return this.post.salary == 0 ?　'面议' : this.post.salary
+  getField(name){
+  	if (this.isNewPost){
+  		return "";
+  	}
+
+  	if (this.post[name]){
+  		return this.post[name];
+  	}else{
+  		return "";
+  	}
   }
 
-  getRequirement(){
-  	return !this.post.requirement ?　'不详' : this.post.requirement
+  getTitle(){
+  	return this.isNewPost ? "招聘信息" : "工作详情";
   }
 
+  makeAPost(){
+  	console.log('Post', this.post);
+  }
 }
