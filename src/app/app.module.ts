@@ -11,6 +11,8 @@ import { DetailPage } from '../pages/postDetail/postDetail';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { PipesModule } from '../pipes/pipes.module';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -21,6 +23,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     HttpModule,
+    PipesModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],

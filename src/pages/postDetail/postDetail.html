@@ -47,7 +47,7 @@
       <ion-col col-6>
             <ion-item>
               <ion-label>薪资</ion-label>
-              <ion-input [readonly]="!isNewPost" ngModel="{{post.salary}}"></ion-input>
+              <ion-input [readonly]="!isNewPost" ngModel="{{post.salary | myPipe}}"></ion-input>
             </ion-item>
       </ion-col>
     </ion-row>
@@ -110,7 +110,7 @@
       <ion-col col-12>
             <ion-item>
               <ion-label>是否中介</ion-label>
-              <ion-input [readonly]="!isNewPost" ngModel="{{post.isagent}}"></ion-input>
+              <ion-input [readonly]="!isNewPost" ngModel="{{post.isagent | myPipe}}"></ion-input>
             </ion-item>
       </ion-col>
     </ion-row>

@@ -4,9 +4,8 @@ import * as moment from 'moment';
 
 @Component({
   selector: 'page-list',
-  templateUrl: 'postDetail.html'
-})
-export class DetailPage {
+  templateUrl: 'postDetail.html',
+})export class DetailPage {
 
   post: any;
   isNewPost: boolean;
