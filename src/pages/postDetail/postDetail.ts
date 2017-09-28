@@ -54,7 +54,15 @@ import * as moment from 'moment';
     postData["salary"] = this.post.salary;
     postData["timestamp"] = moment(this.post.timestamp).valueOf();
     postData["title"] = this.post.title;
-    
-    console.log('Post', postData);
+
+    if (!postData['postby']){
+      console.error('postby is a must');
+    }else if(!postData['timestamp'] || isNaN(postData['timestamp'])){
+      console.error('datatime format is wrong');
+    }else{
+      console.log('PostDat', postData);
+    }
+
+
   }
 }
