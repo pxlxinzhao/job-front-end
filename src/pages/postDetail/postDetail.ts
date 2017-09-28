@@ -14,6 +14,10 @@ import * as moment from 'moment';
     this.post = navParams['data']['post'];
     this.isNewPost = navParams['data']['isNewPost'];
 
+    if (this.isNewPost){
+      this.post.isagent = false;
+    }
+
     this.post.timestamp = moment(this.post.timestamp).format('MM/DD/YYYY HH:mm');
   }
 
@@ -34,6 +38,23 @@ import * as moment from 'moment';
   }
 
   makeAPost(){
-  	console.log('Post', this.post);
+
+    var postData = {};
+
+    postData["address"] = this.post.address;
+    postData["category"] = this.post.category;
+    postData["city"] = this.post.city;
+    postData["details"] = this.post.details;
+    postData["email"] = this.post.email;
+    postData["isagent"] = this.post.isagent;
+    postData["phone"] = this.post.phone;
+    postData["phone2"] = this.post.phone2;
+    postData["postby"] = this.post.postby;
+    postData["requirement"] = this.post.requirement;
+    postData["salary"] = this.post.salary;
+    postData["timestamp"] = moment(this.post.timestamp).valueOf();
+    postData["title"] = this.post.title;
+    
+    console.log('Post', postData);
   }
 }

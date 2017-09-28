@@ -69,3 +69,22 @@ textarea.text-input {
   right: 10px;
   top: 6px;
 }
+
+//this fix the detail check box position
+.item.item-md .checkbox-md {
+    position: absolute;
+    display: block;
+    margin: 9px 36px 9px 4px;
+    left: 100px;
+    bottom: 4px;
+}
+
+.checkbox-md.checkbox-disabled, .item-md.item-checkbox-disabled ion-label {
+    opacity: 1;
+    pointer-events: none;
+    color: #999;
+}
+
+.label-wrapper {
+  color: #999;
+}
