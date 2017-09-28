@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { DetailPage } from '../postDetail/postDetail';
+import * as moment from 'moment';
 
 @Component({
   selector: 'page-list',
@@ -51,5 +52,10 @@ export class ListPage {
       post: {},
       isNewPost: true
     });
+  }
+
+  getTimeDiff(timestamp){
+    const now = moment();
+    return now.diff(moment(timestamp));
   }
 }

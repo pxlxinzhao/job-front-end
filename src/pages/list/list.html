@@ -16,7 +16,7 @@
     <ion-row>
       <ion-col col-12>
           <button ion-item *ngFor="let post of posts" (click)="itemTapped($event, post)">
-            {{post.title}}
+            {{post.title}}<span style="float: right;">{{post | timeDiffPipe}}</span>
           </button>
       </ion-col>
     </ion-row>

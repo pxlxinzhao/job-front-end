@@ -65,4 +65,8 @@ import * as moment from 'moment';
 
 
   }
+
+  deleteAPost(){
+    const id = this.post.id;
+  }
 }
