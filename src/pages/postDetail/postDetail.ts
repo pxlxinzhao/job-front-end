@@ -22,19 +22,19 @@ import * as moment from 'moment';
   }
 
   getField(name){
-  	if (this.isNewPost){
-  		return "";
-  	}
+    if (this.isNewPost){
+      return "";
+    }
 
-  	if (this.post[name]){
-  		return this.post[name];
-  	}else{
-  		return "";
-  	}
+    if (this.post[name]){
+      return this.post[name];
+    }else{
+      return "";
+    }
   }
 
   getTitle(){
-  	return this.isNewPost ? "招聘信息" : "工作详情";
+    return this.isNewPost ? "招聘信息" : "工作详情";
   }
 
   makeAPost(){
@@ -67,6 +67,6 @@ import * as moment from 'moment';
   }
 
   deleteAPost(){
-    const id = this.post.id;
+    // const id = this.post.id;
   }
 }

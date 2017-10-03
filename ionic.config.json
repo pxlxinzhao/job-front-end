@@ -1,6 +1,8 @@
 {
-  "name": "sidemenu",
-  "app_id": "",
+  "name": "FindJob",
+  "app_id": "com.patrickpu.FindJob",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }
